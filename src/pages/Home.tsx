@@ -14,22 +14,59 @@ const Home = () => {
     "@type": "EducationalOrganization",
     "name": "American College of Science & Technology",
     "alternateName": "ACST",
-    "url": window.location.origin,
-    "logo": `${window.location.origin}/favicon.ico`,
-    "description": "Premier institution for science and technology education, offering innovative programs and world-class research opportunities.",
+    "url": "https://americancollege.ng",
+    "logo": "https://i.ibb.co/pj3yN3zV/American-College-Of-Science-Technology.jpg",
+    "description": "ACST is Nigeria's premier institution for science and technology education, offering innovative programs across multiple campuses including Lagos, Warri, Akure, Benin, Ekiti, and Kaduna.",
+    "sameAs": [
+      "https://americancollege.ng",
+      "https://www.facebook.com/americancollegeng",
+      "https://twitter.com/americancollegeng",
+      "https://www.linkedin.com/school/americancollegeng"
+    ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 University Avenue",
-      "addressLocality": "Boston",
-      "addressRegion": "MA",
-      "postalCode": "02134",
-      "addressCountry": "US"
+      "streetAddress": "3rd Floor, Suite D3, The White House, WUNO PLAZA, Ibrahim Waziri Crescent",
+      "addressLocality": "Gudu District, Apo",
+      "addressRegion": "Abuja",
+      "addressCountry": "NG"
+    },
+    "location": {
+      "@type": "Place",
+      "name": "Main Campus - Abuja",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3rd Floor, Suite D3, The White House, WUNO PLAZA, Ibrahim Waziri Crescent",
+        "addressLocality": "Gudu District, Apo",
+        "addressRegion": "Abuja",
+        "addressCountry": "NG"
+      }
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-617-555-0100",
+      "telephone": "+2348062650766",
       "contactType": "admissions",
-      "email": "admissions@acst.edu"
+      "email": "admissions@americancollege.ng"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Academic Programs",
+      "itemListElement": [
+        {
+          "@type": "EducationalOccupationalProgram",
+          "name": "Science Programs",
+          "description": "Comprehensive science programs including Physics, Chemistry, and Biology"
+        },
+        {
+          "@type": "EducationalOccupationalProgram",
+          "name": "Technology Programs",
+          "description": "Advanced technology programs in Computer Science, IT, and Software Engineering"
+        },
+        {
+          "@type": "EducationalOccupationalProgram",
+          "name": "Engineering Programs",
+          "description": "Engineering programs across various disciplines"
+        }
+      ]
     }
   };
 
@@ -59,9 +96,11 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="American College of Science & Technology (ACST)"
-        description="ACST is a premier institution offering innovative science and technology programs. Join 15,000+ students in advancing knowledge through cutting-edge research and education."
-        keywords="ACST, science college, technology education, STEM university, research institution"
+        title="American College of Science & Technology (ACST) - Nigeria's Leading Institution for Science & Technology Education"
+        description="ACST is Nigeria's premier institution for science and technology education, with campuses in Abuja, Lagos, Warri, Akure, Benin, Ekiti, and Kaduna. Join our community of future innovators and leaders in STEM education."
+        keywords="ACST Nigeria, science college Nigeria, technology education, STEM university Nigeria, research institution, computer science, engineering, biotechnology, Abuja education, Lagos campus, Warri campus, Akure campus, Benin campus, Ekiti campus, Kaduna campus"
+        ogImage="https://i.ibb.co/pj3yN3zV/American-College-Of-Science-Technology.jpg"
+        canonical="https://americancollege.ng"
         structuredData={structuredData}
       />
       <Navigation />
