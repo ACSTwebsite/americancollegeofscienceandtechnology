@@ -41,7 +41,7 @@ export const Navigation = () => {
               </Link>
             ))}
             <Button asChild variant="default" className="ml-4 bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link to="/admissions">Apply Now</Link>
+              <Link to="/apply">Apply Now</Link>
             </Button>
           </div>
 
@@ -70,7 +70,7 @@ export const Navigation = () => {
             ))}
             <div className="px-4 pt-2">
               <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link to="/admissions" onClick={() => setIsOpen(false)}>Apply Now</Link>
+                <Link to="/apply" onClick={() => setIsOpen(false)}>Apply Now</Link>
               </Button>
             </div>
           </div>
