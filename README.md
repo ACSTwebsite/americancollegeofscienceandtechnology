@@ -71,3 +71,20 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Sitemap & Google Search Console
+
+To prepare this site for indexing and submit a sitemap to Google Search Console:
+
+- A `sitemap.xml` file has been added to `public/sitemap.xml`. It currently uses `https://example.com` as the base URL.
+- Replace `https://example.com` with your production domain before submitting. For example, change all URLs to `https://yourdomain.tld`.
+- The `robots.txt` file (`public/robots.txt`) now includes a `Sitemap:` directive pointing at `/sitemap.xml`.
+
+Steps to submit:
+
+1. Deploy the site to your production domain.
+2. Open Google Search Console and add/verify your site (use the domain or URL-prefix property).
+3. In Search Console, go to "Sitemaps" and submit `https://yourdomain.tld/sitemap.xml`.
+4. Monitor the indexing status and fix any reported crawl errors.
+
+If you want an automated sitemap that updates based on your route config or dynamic content, I can add a build-time script or a simple Node script to generate `public/sitemap.xml` from your routes.
