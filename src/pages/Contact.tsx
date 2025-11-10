@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, MapPinned, Globe, Building2 } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -127,63 +128,90 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="space-y-6">
                 <Card className="p-6">
-                  <h3 className="mb-4">Contact Information</h3>
-                  <div className="space-y-4">
+                  <h3 className="mb-4 text-lg font-semibold">Contact Information</h3>
+                  <div className="space-y-6">
                     <div className="flex items-start gap-3">
-                      <MapPin className="text-secondary mt-1 flex-shrink-0" size={20} />
+                      <MapPin className="text-accent mt-1 flex-shrink-0" size={20} />
                       <div>
-                        <div className="font-medium mb-1">Main Campus</div>
-                        <p className="text-sm text-muted-foreground">
-                          123 University Avenue<br />
-                          Boston, MA 02134<br />
-                          United States
+                        <div className="font-medium mb-2">Main Campus - Abuja</div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          3rd Floor, Suite D3<br />
+                          The White House, WUNO PLAZA<br />
+                          Ibrahim Waziri Crescent,<br />
+                          Gudu District, Apo<br />
+                          Abuja FCT
                         </p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <Phone className="text-secondary mt-1 flex-shrink-0" size={20} />
+                      <Phone className="text-accent mt-1 flex-shrink-0" size={20} />
                       <div>
-                        <div className="font-medium mb-1">Phone</div>
-                        <p className="text-sm text-muted-foreground">
-                          Main: (617) 555-0100<br />
-                          Admissions: (617) 555-0123
-                        </p>
+                        <div className="font-medium mb-2">Phone</div>
+                        <a 
+                          href="tel:+2348062650766" 
+                          className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          +234 806 265 0766
+                        </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <Mail className="text-secondary mt-1 flex-shrink-0" size={20} />
+                      <Mail className="text-accent mt-1 flex-shrink-0" size={20} />
                       <div>
-                        <div className="font-medium mb-1">Email</div>
-                        <p className="text-sm text-muted-foreground">
-                          General: info@acst.edu<br />
-                          Admissions: admissions@acst.edu
-                        </p>
+                        <div className="font-medium mb-2">Email</div>
+                        <a 
+                          href="mailto:admissions@americancollege.ng" 
+                          className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          admissions@americancollege.ng
+                        </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <Clock className="text-secondary mt-1 flex-shrink-0" size={20} />
+                      <Globe className="text-accent mt-1 flex-shrink-0" size={20} />
                       <div>
-                        <div className="font-medium mb-1">Office Hours</div>
-                        <p className="text-sm text-muted-foreground">
-                          Monday - Friday: 8:00 AM - 6:00 PM<br />
-                          Saturday: 9:00 AM - 2:00 PM<br />
-                          Sunday: Closed
-                        </p>
+                        <div className="font-medium mb-2">Website</div>
+                        <a 
+                          href="https://www.americancollege.ng" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          www.americancollege.ng
+                        </a>
                       </div>
                     </div>
                   </div>
                 </Card>
 
-                <Card className="p-6 bg-accent text-accent-foreground">
-                  <h3 className="mb-3">Schedule a Visit</h3>
-                  <p className="text-sm mb-4 opacity-90">
-                    Experience ACST firsthand. Schedule a campus tour to explore our facilities and meet our community.
+                <Card className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Building2 className="text-accent" size={24} />
+                    <h3 className="text-lg font-semibold">Other Campuses</h3>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    {['Lagos', 'Warri', 'Akure', 'Benin', 'Ekiti', 'Kaduna'].map((campus) => (
+                      <div 
+                        key={campus}
+                        className="flex items-center gap-2"
+                      >
+                        <MapPinned size={16} className="text-accent/70" />
+                        <span className="text-muted-foreground">{campus}</span>
+                      </div>
+                    ))}
+                  </div>
+                </Card>
+
+                <Card className="p-6 bg-accent/10 border-accent/20">
+                  <h3 className="mb-3 font-semibold">Visit Our Campus</h3>
+                  <p className="text-sm mb-4 text-muted-foreground">
+                    Experience ACST firsthand. Schedule a campus tour to explore our facilities and meet our faculty.
                   </p>
-                  <Button variant="outline" className="w-full bg-accent-foreground text-accent hover:bg-accent-foreground/90">
-                    Book a Tour
+                  <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                    <Link to="/contact">Schedule a Visit</Link>
                   </Button>
                 </Card>
               </div>
