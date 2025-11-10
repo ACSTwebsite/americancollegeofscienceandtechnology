@@ -4,7 +4,6 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import heroImage from '@/assets/hero-campus.jpg';
-import graduationImage from '@/assets/graduation.jpg';
 import { GraduationCap, Users, Globe, Award, ArrowRight, Rocket, Laptop, Users2, Building2, Heart, Briefcase, PiggyBank } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -285,7 +284,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src={graduationImage} 
+                  src="https://i.ibb.co/Rd3CYjQ/American-College-Of-Science-Technology-1.jpg" 
                   alt="ACST graduates celebrating at commencement ceremony" 
                   className="w-full h-full object-cover"
                 />
