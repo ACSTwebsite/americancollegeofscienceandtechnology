@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import heroImage from '@/assets/hero-campus.jpg';
 import graduationImage from '@/assets/graduation.jpg';
-import { GraduationCap, Users, Globe, Award, ArrowRight } from 'lucide-react';
+import { GraduationCap, Users, Globe, Award, ArrowRight, Rocket, Laptop, Users2, Building2, Heart, Briefcase, PiggyBank } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -141,25 +141,100 @@ const Home = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="mb-4">Why Choose ACST?</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Experience world-class education, cutting-edge research facilities, and a vibrant community 
-                dedicated to innovation and excellence.
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                Choosing the right university is a life-changing decision — one that shapes your future, your career, and the person you become. 
+                At the American College of Science and Technology (ACST), we make that choice an easy one.
+              </p>
+              <p className="text-muted-foreground max-w-3xl mx-auto mt-4">
+                Here's why forward-thinking students across Africa and beyond choose ACST as the launchpad for their success:
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {highlights.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="text-accent-foreground" size={32} />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </Card>
-                );
-              })}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              <Card className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Rocket className="text-accent-foreground" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Future-Focused Education</h3>
+                <p className="text-muted-foreground">
+                  At ACST, we go beyond the traditional classroom. Our curriculum is designed to equip you with the knowledge, 
+                  creativity, and problem-solving skills needed to thrive in a rapidly evolving world. We blend cutting-edge 
+                  technology with practical learning, ensuring every graduate is ready for the challenges and opportunities of the future.
+                </p>
+              </Card>
+
+              <Card className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Laptop className="text-accent-foreground" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Learning by Doing</h3>
+                <p className="text-muted-foreground">
+                  We believe the best way to learn is to experience. Every program at ACST integrates hands-on training, 
+                  real-world projects, and industry collaborations that prepare you for life after graduation. By the time 
+                  you complete your degree, you'll have the confidence and competence employers are looking for.
+                </p>
+              </Card>
+
+              <Card className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Users2 className="text-accent-foreground" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Inspiring Faculty and Mentorship</h3>
+                <p className="text-muted-foreground">
+                  Our faculty members are more than educators — they're leaders, innovators, and mentors. With years of 
+                  academic and professional expertise, they are committed to guiding you toward excellence, supporting your 
+                  ambitions, and helping you discover your full potential.
+                </p>
+              </Card>
+
+              <Card className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Building2 className="text-accent-foreground" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">State-of-the-Art Facilities</h3>
+                <p className="text-muted-foreground">
+                  Our modern learning environment is built for innovation. From fully equipped science and technology labs 
+                  to digital classrooms and collaborative study spaces, ACST provides access to world-class facilities that 
+                  enhance both learning and creativity.
+                </p>
+              </Card>
+
+              <Card className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Heart className="text-accent-foreground" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">A Supportive, Inclusive Community</h3>
+                <p className="text-muted-foreground">
+                  ACST is more than a university — it's a community where every student belongs. We value diversity, 
+                  collaboration, and personal growth. Here, you'll find lifelong friends, supportive staff, and a network 
+                  of peers who share your drive and determination.
+                </p>
+              </Card>
+
+              <Card className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Briefcase className="text-accent-foreground" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Career Development and Global Opportunities</h3>
+                <p className="text-muted-foreground">
+                  Our focus doesn't end at graduation. With dedicated career support, internship programs, and partnerships 
+                  with leading organizations, ACST ensures you're ready to compete globally and succeed anywhere. Many of 
+                  our graduates go on to make an impact across industries and continents.
+                </p>
+              </Card>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Card className="p-8 max-w-2xl mx-auto bg-accent text-accent-foreground">
+                <div className="w-16 h-16 bg-accent-foreground/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <PiggyBank className="text-accent-foreground" size={32} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-center">Accessible and Affordable Education</h3>
+                <p className="text-center">
+                  We believe that financial limitations should never stand in the way of your dreams. ACST offers 
+                  scholarships, flexible payment plans, and financial aid options to make quality education accessible to all.
+                </p>
+              </Card>
             </div>
           </div>
         </section>
